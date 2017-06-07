@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<persistence xmlns="http://java.sun.com/xml/ns/persistence"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    version="1.0">
+
+    <persistence-unit name="testjpa" transaction-type="RESOURCE_LOCAL">
+        <provider>
+            org.apache.openjpa.persistence.PersistenceProviderImpl
+        </provider>
+        <class>basic.entity.Customer</class>
+        <class>basic.entity.CustomerCompositePrimaryKey</class>
+        <class>basic.entity.Address</class>
+        <class>basic.entity.CustomerSingleTable</class>
+        <class>basic.entity.OnlineCustomerSingleTable</class>
+        <class>basic.entity.CustomerJoinedTable</class>
+        <class>basic.entity.OnlineCustomerJoinedTable</class>
+        <class>basic.entity.CustomerTablePerClass</class>
+        <class>basic.entity.OnlineCustomerTablePerClass</class>
+        <class>relationships.entity.Invoice</class>
+        <class>relationships.entity.Order</class>
+        <class>relationships.entity.Customer</class>
+        <class>relationships.entity.Product</class>
+        <class>relationships.entity.Survey</class>
+        <!-- <class>basic.entity.CustomerJoined</class>
+
+
+      -->
+        <properties>
+            <property name="javax.persistence.jdbc.url"
+                      value="jdbc:mysql://127.0.0.1:3306/jpa"/>
+            <property name="javax.persistence.jdbc.driver"
+                      value="com.mysql.jdbc.Driver"/>
+            <property name="javax.persistence.jdbc.user"  value="root"/>
+            <property name="javax.persistence.jdbc.password" value=""/>
+        </properties>
+    </persistence-unit>
+
+</persistence>
